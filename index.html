@@ -89,9 +89,9 @@ footer {
             let age = (document.getElementById('pass').value);
             let isChecked = document.getElementById('terms').checked;
 
-            if (user === "Zeek_PBCO2026_3x3_Champion" || age === "7.91averageof5") {
-                alert("You have successfully logged in.");
-            } else {
+            if (user === "Zeek_PBCO2026_3x3_Champion" && age === "7.91averageof5") {
+    alert("You have successfully logged in.");
+} else {
                 alert("Incorrect account info");
             }
         }
@@ -102,20 +102,16 @@ footer {
 //Use Switch Code for the checkbox
 
 function check() {
-        let variable_name= document.getElementById("checkboxID").checked; 
-         //when checked, it reads true
+    let isChecked = document.getElementById("terms").checked; 
 
-        switch(inputtinggg){
-            case true:
-                //use innerHTML to display a message
+    switch(isChecked) {
+        case true:
+            document.getElementById('Instructions').innerHTML = "Remember Me is ON";
             break;
-
-            case false:
-                //use innerHTML to show nothing. use quotation;
+        case false:
+            document.getElementById('Instructions').innerHTML = "";
             break;
-
-            //default may almost never needed since there is already true and false statement;
- }
+    }
 }
 </script>
 </body>
