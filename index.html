@@ -39,6 +39,14 @@ input#username{
     width: 500px;
     margin: 0 auto;
 }
+footer {
+        background: white;
+        padding: 10px ;
+        width: 1320px;
+        border-radius: 15px;
+        margin-top: 20%;
+        background-color: rgba(161, 177, 207, 0.7);
+}
 </style>
 </head>
 <body>
@@ -54,23 +62,29 @@ input#username{
 </details>
 
 <br><br><br>
-
+<form id="loginForm">
 <label class="form-label">Username</label>
 <br>
 <input type="text" class="form-control form-control-sm" id="username" placeholder="Type in your Username"><!--type in usernam-->
 <br>
 <label class="form-label">Password</label>
 <br>
-<input type="text" class="form-control form-control-sm" id="pass" placeholder="Type in your Password"><!--type in password-->
-<br>
+<input type="password" class="form-control form-control-sm" id="pass" placeholder="Type in your Password"><!--type in password-->
 <input type="checkbox" id="terms">Remember Me<!--toggle to stay logged in-->
-<br>
-  
+<br><br>
+<input type="button" class=" btn btn-primary" onclick="login()" value="Login"></input> 
+<input type="reset" class="btn btn-danger" value="Reset"></input>
+<br><br>
+<p><a href="https://docs.google.com/document/d/1kh1jzQhV6lzRpQzwesvghtpEZsibkTKo1bcgQkTJqP8/edit?tab=t.0">Forgot username and/or password?</a></p>
+</form>
 </div>
+    <footer class="text-black">
+        Francis Ezekiel Fernandez | 9 - Topaz ©2026
+    </footer>
 </center>
 <script>
      document.getElementById('Instructions').innerHTML= "Username: Zeek_PBCO2026_3x3_Champion <br> Password: 7.91averageof5";
-        function createacc() {
+        function login() {
             let user = document.getElementById('username').value;
             let age = (document.getElementById('pass').value);
             let isChecked = document.getElementById('terms').checked;
@@ -81,6 +95,28 @@ input#username{
                 alert("Incorrect account info");
             }
         }
+
+    //Use if-else statement for username and password verification. Use  === comparison operator and AND operator to check if condition is TRUE.
+
+
+//Use Switch Code for the checkbox
+
+function check() {
+        let variable_name= document.getElementById("checkboxID").checked; 
+         //when checked, it reads true
+
+        switch(inputtinggg){
+            case true:
+                //use innerHTML to display a message
+            break;
+
+            case false:
+                //use innerHTML to show nothing. use quotation;
+            break;
+
+            //default may almost never needed since there is already true and false statement;
+ }
+}
 </script>
 </body>
 </html>
