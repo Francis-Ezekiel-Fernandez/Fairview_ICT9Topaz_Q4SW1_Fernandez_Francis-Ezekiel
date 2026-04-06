@@ -20,14 +20,67 @@ div{
     border-radius: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 150px;
+    margin-top: 20px;
+}
+input#text{
+    width: 200px;
+    margin: 30px;
+}
+details.ontoggle {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+input#username{
+    width: 500px;
+    margin: 0 auto;
+}
+#pass{
+    width: 500px;
+    margin: 0 auto;
 }
 </style>
 </head>
-<body>\
+<body>
 <center>
 <div class="container mx-auto d-block">
 <h1>Login</h1>
+
+<details class="ontoggle">  <!--Toggle to see User Information-->
+
+    <summary class="small text-info">Instructions</summary>
+    <p class="text-info" id="Instructions"></p>
+
+</details>
+
+<br><br><br>
+
+<label class="form-label">Username</label>
+<br>
+<input type="text" class="form-control form-control-sm" id="username" placeholder="Type in your Username"><!--type in usernam-->
+<br>
+<label class="form-label">Password</label>
+<br>
+<input type="text" class="form-control form-control-sm" id="pass" placeholder="Type in your Password"><!--type in password-->
+<br>
+<input type="checkbox" id="terms">Remember Me<!--toggle to stay logged in-->
+<br>
+  
 </div>
 </center>
+<script>
+     document.getElementById('Instructions').innerHTML= "Username: Zeek_PBCO2026_3x3_Champion <br> Password: 7.91averageof5";
+        function createacc() {
+            let user = document.getElementById('username').value;
+            let age = (document.getElementById('pass').value);
+            let isChecked = document.getElementById('terms').checked;
+
+            if (user === "Zeek_PBCO2026_3x3_Champion" || age === "7.91averageof5") {
+                alert("You have successfully logged in.");
+            } else {
+                alert("Incorrect account info");
+            }
+        }
+</script>
 </body>
 </html>
